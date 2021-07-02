@@ -51,7 +51,7 @@ iaApp.controller('MainController', function($scope, $route, $routeParams, $locat
      $scope.$routeParams = $routeParams;
 	console.log('MainController executed');
      $scope.datacontent = null;
-	$http.get('dataformat.json').success(onSuc).error(onE);
+	$http.get('https://iasquaretest.azurewebsites.net/dataformat.json').success(onSuc).error(onE);
 	function onSuc(data){
 		//console.log(data);
 		if (data){
@@ -92,7 +92,7 @@ iaApp.controller('addProcessCtrl',function($scope, $route, $routeParams, $locati
 	}
 
 	var editor;
-	$http.get('_processSchema.json').success(onSuc).error(onE);
+	$http.get('https://iasquaretest.azurewebsites.net/_processSchema.json').success(onSuc).error(onE);
 	function onSuc(data){
 		if (data){
 			$scope.schema = data;
