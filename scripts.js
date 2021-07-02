@@ -51,7 +51,7 @@ iaApp.controller('MainController', function($scope, $route, $routeParams, $locat
      $scope.$routeParams = $routeParams;
 	console.log('MainController executed');
      $scope.datacontent = null;
-	$http.get('https://iasquaretest.azurewebsites.net/dataformat.json').success(onSuc).error(onE);
+	$http.get('dataformat.json').success(onSuc).error(onE);
 	function onSuc(data){
 		//console.log(data);
 		if (data){
